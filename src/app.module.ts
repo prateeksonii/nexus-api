@@ -14,7 +14,7 @@ import { ProductsModule } from './products/products.module';
       url: process.env.DB_URL,
       autoLoadEntities: true,
       logging: true,
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     ProductsModule,
