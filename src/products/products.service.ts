@@ -11,7 +11,6 @@ export class ProductsService {
   ) {}
 
   createProduct(productBody: CreateProductDTO): Promise<Product> {
-    const product = this.productsRepository.create(productBody);
-    return this.productsRepository.save(product);
+    return this.productsRepository.save(productBody);
   }
 }

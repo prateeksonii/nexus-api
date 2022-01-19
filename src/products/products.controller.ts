@@ -20,10 +20,9 @@ export class ProductsController {
     @UploadedFile() file: Express.Multer.File,
     @Body() createProductDTO: CreateProductDTO,
   ): Promise<Product> {
-    console.log(file);
     return this.productsService.createProduct({
       ...createProductDTO,
-      image: 'hgferbhg',
+      image: file.filename,
     });
   }
 }
